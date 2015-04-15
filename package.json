@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pumodo/node-s3.git"
+    "url": "git://github.com/cleverplatypus/node-s3.git"
   },
   "dependencies": {
     "curly": "0.6.x"
@@ -22,10 +22,10 @@
     "storage",
     "amazon"
   ],
-  "author": "Thomas Watson Steen <w@tson.dk>",
+  "author": "Nicola Dal Pont <ndalpont@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pumodo/node-s3/issues"
+    "url": "https://github.com/cleverplatypus/node-s3/issues"
   },
-  "homepage": "https://github.com/pumodo/node-s3"
+  "homepage": "https://github.com/cleverplatypus/node-s3/"
 }
