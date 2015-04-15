@@ -31,7 +31,8 @@ var options = {
   key: '...',
   secret: '...',
   bucket: '...',
-  pathname: '/foo' // optional: prefix all S3 keys with this path
+  pathname: '/foo', // optional: prefix all S3 keys with this path,
+  headersOnly: false // if true the s3 methods will only return the headers needed to access s3
 };
 var s3 = require('node-s3')(options);
 ```

@@ -79,8 +79,11 @@ module.exports = function (options) {
       options = options || {};
       options.pool = false;
       options.headers = sign(verb, signing, options.headers);
-
-      return curly[method](prefix + pathname, options, callback);
+      if(options.headersOnly){
+        return options.headers;
+      } else {
+        return curly[method](prefix + pathname, options, callback);
+      }
     };
   });
 
