@@ -42,10 +42,8 @@ var signer = function (key, secret) {
   return function (verb, resource, headers) {
     headers = headers || {};
     headers['x-amz-date'] = (new Date()).toUTCString();
-
     var stringToSign = getStringToSign(verb, resource, headers);
     var hash = crypto.createHmac('sha1', secret).update(stringToSign).digest('base64');
-
     headers.authorization = 'AWS ' + key + ':' + hash;
 
     return headers;
@@ -79,9 +77,13 @@ module.exports = function (options) {
       options = options || {};
       options.pool = false;
       options.headers = sign(verb, signing, options.headers);
+
+
       if(options.headersOnly){
+        console.log('buda');
         return options.headers;
       } else {
+        console.log('pest');
         return curly[method](prefix + pathname, options, callback);
       }
     };
